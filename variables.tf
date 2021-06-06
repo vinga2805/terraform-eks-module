@@ -1,25 +1,25 @@
 # Variables Configuration
 
 variable "cluster-name" {
-  default     = "eks-cluster"
+  default     = "demo-cluster"
   type        = string
   description = "The name of your EKS Cluster"
 }
 
 variable "aws-region" {
-  default     = "us-east-1"
+  default     = "ap-south-1"
   type        = string
   description = "The AWS Region to deploy EKS"
 }
 
 variable "availability-zones" {
-  default     = ["us-east-1a", "us-east-1b", "us-east-1c"]
+  default     = ["ap-south-1a", "ap-south-1b", "ap-south-1c"]
   type        = list
   description = "The AWS AZ to deploy EKS"
 }
 
 variable "k8s-version" {
-  default     = "1.17"
+  default     = "1.19"
   type        = string
   description = "Required K8s version"
 }
@@ -99,7 +99,7 @@ variable "min-size" {
 }
 
 variable "ec2-key-public-key" {
-  default     = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD3F6tyPEFEzV0LX3X8BsXdMsQz1x2cEikKDEY0aIj41qgxMCP/iteneqXSIFZBp5vizPvaoIR3Um9xK7PGoW8giupGn+EPuxIA4cDM4vzOqOkiMPhz5XK0whEjkVzTo4+S0puvDZuwIsdiW9mxhJc7tgBNL0cYlWSYVkz4G/fslNfRPW5mYAM49f4fhtxPb5ok4Q2Lg9dPKVHO/Bgeu5woMc7RY0p1ej6D4CKFE6lymSDJpW0YHX/wqE9+cfEauh7xZcG0q9t2ta6F6fmX0agvpFyZo8aFbXeUBr7osSCJNgvavWbM/06niWrOvYX2xwWdhXmXSrbX8ZbabVohBK41 email@example.com"
+  default     = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCm8hil6Qqh5s05e5dn09bz9cvezaPiMC6Fm3jYtgclVvHeUStpxQhRpxKG+B5UjJDHTcdEDcjXXEvJIqZHzMYT22IdsELHkJAGxFiI/CWiNioDA+bjFFQZ9ieUWYNI/rJ2tVkI6VzmAKjqgXifzl8di7/VAXzHpbeYRECsWYyWxLmbmEiefcG91blHhP82fx97LiYXSGDF2R4RoybgTcjHV/B1qsCz1Z5GEU9jIHfrMjjtVkARtNqoIPn4kz4wveyMQBpdjBXNl5+FXqPlFCDNivKRQZfWWGqXcpJyJXjtriEwuPb52GuooymSBk3zXlV2IhKDp8QpLpVMqM8RZiLB ubuntu@ip-172-31-12-119"
   type        = string
   description = "AWS EC2 public key data"
 }
